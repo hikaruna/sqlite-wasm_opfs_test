@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx
+    volumes:
+      - ./:/usr/share/nginx/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./mime.types:/etc/nginx/mime.types
+    ports:
+      - 8080:80
